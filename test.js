@@ -58,3 +58,37 @@ test('set an object', t => {
 		foo: 'bar'
 	});
 });
+
+test('check for deep equality', t => {
+	t.plan(2);
+	let counter = 0;
+
+	t.context.conf.select('foo').subscribe(value => {
+		t.deepEqual(value, counter === 0 ? {foo: 'bar'} : {foo: '🦄'});
+		counter++;
+	});
+
+	t.context.conf.set('foo', {foo: 'bar'});
+	t.context.conf.set('foo', {foo: '🦄'});
+	t.context.conf.set('foo', {foo: '🦄'});
+});
+
+test('check for deep equality when manipulating source object', t => {
+	t.plan(2);
+	let counter = 0;
+
+	t.context.conf.select('foo').subscribe(value => {
+		t.deepEqual(value, counter === 0 ? {foo: 'bar'} : {foo: '🦄'});
+		counter++;
+	});
+
+	const value = {
+		foo: 'bar'
+	};
+
+	t.context.conf.set('foo', value);
+
+	value.foo = '🦄';
+
+	t.context.conf.set('foo', value);
+});
