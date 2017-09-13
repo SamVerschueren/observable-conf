@@ -1,6 +1,6 @@
 {
   "name": "observable-conf",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Listen for changes in your conf config",
   "license": "MIT",
   "repository": "SamVerschueren/observable-conf",
@@ -19,16 +19,16 @@
     "index.js"
   ],
   "keywords": [
-		"config",
-		"store",
-		"app",
-		"storage",
-		"conf",
-		"configuration",
-		"observable",
-		"rxjs",
-		"observe",
-		"watch"
+    "config",
+    "store",
+    "app",
+    "storage",
+    "conf",
+    "configuration",
+    "observable",
+    "rxjs",
+    "observe",
+    "watch"
   ],
   "dependencies": {
     "conf": "^1.2.0",
