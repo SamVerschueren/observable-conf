@@ -1,6 +1,6 @@
 {
   "name": "observable-conf",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Listen for changes in your conf config",
   "license": "MIT",
   "repository": "SamVerschueren/observable-conf",
